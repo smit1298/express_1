@@ -7,7 +7,7 @@
 <body>
     <%- include('./includes/nav.ejs') %>
 
-    <form class="container" action="/message" method="POST">
+    <form class="container" action="/message" method="POST" enctype="multipart/form-data"> 
         <label class="form-group" for="">
            Name: <input class="form-control" name="fullname" type="text" placeholder="enter your name" >
         </label><br> <br>
@@ -17,6 +17,9 @@
         <label class="form-group" for="">
            Phone No: <input class="form-control" name="phone" type="number" placeholder="+234567890" >
         </label><br><br>
+        <div class="form-group">
+            Upload File: <input class="form-control" name="contactImg" type="file">
+        </div><br>
         <div class="form-group">
                     Feedback: <textarea class="form-control" name="description" id="" cols="30" rows="10" placeholder="your feedback here"></textarea>
         </div>

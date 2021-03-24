@@ -28,9 +28,15 @@ router.get('/:id/:name', (req, res, next) =>{
     });
 
 
-router.get('/api/students', (req, res, next) => {
+router.get('/api/students/:id', (req, res, next) => {
+    const id = parseInt(req.params.id);
+    const student = data.find((students) =>{
+        if (id === students.id){
+            return students;
+        }
+    });
     res.status(200).json({
-        data,
+        student,
     });
 });
 
