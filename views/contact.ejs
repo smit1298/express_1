@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./includes/head.ejs') %>
+
+</head>
+<body>
+    <%- include('./includes/nav.ejs') %>
+
+    <form class="container" action="/message" method="POST">
+        <label class="form-group" for="">
+           Name: <input class="form-control" name="fullname" type="text" placeholder="enter your name" >
+        </label><br> <br>
+        <label class="form-group" for="">
+          Email:  <input class="form-control" name="email" type="email" placeholder="enter your email" >
+        </label><br> <br>
+        <label class="form-group" for="">
+           Phone No: <input class="form-control" name="phone" type="number" placeholder="+234567890" >
+        </label><br><br>
+        <div class="form-group">
+                    Feedback: <textarea class="form-control" name="description" id="" cols="30" rows="10" placeholder="your feedback here"></textarea>
+        </div>
+<div>
+    <button class="btn btn-block btn-secondary" >Contact Us</button>
+</div>
+    </form>
+</body>
+</html>

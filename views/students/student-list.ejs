@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../includes/head.ejs') %>
+
+</head>
+
+<body>
+    <%- include('../includes/nav.ejs') %>
+
+    <h1>Student-List</h1>
+    <ul>
+        <% students.map ((item)=> {%>
+            <li>
+            <a href="/students/<%= item.name %>"> <%= item.name%> </a>
+            </li>
+            <% }) %>
+    </ul>
+</body>
+
+</html>
